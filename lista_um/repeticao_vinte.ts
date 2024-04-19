@@ -15,6 +15,7 @@ while (true) {
 
         let raiz = Math.sqrt(N);
         if (raiz === Math.floor(raiz)) {
+ 
             soma++; 
         }
        

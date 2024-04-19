@@ -12,4 +12,4 @@ for (let i = 0; i < N; i++) {
 numeros.sort((a, b) => b - a);
 
 // Mostrar os três maiores números
-console.log("Os três maiores números digitados são:", numeros.slice(0, 3));
+console.log("Os três maiores números digitados são:", numeros.slice(0,3));

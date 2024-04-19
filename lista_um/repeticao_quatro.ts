@@ -15,10 +15,10 @@ console.log("\nDigite dois números aonde o primeiro é maior que o segundo\n");
 
    
    let num = m;
-   let nume = n - 1;
+   let nume = n;
   
     console.log(`\nOs números ímpares entre ${m} e ${n} são:`);
-    while(num<nume) {
+    while(num<=nume) {
       
         num++;
         if (num % 2 !== 0){

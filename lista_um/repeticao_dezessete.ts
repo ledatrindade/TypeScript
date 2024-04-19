@@ -19,4 +19,4 @@ while(true) {
     }
 
 }
-    console.log(`A quantidade de alunos que foram cadastrados foi ${soma} e suas medias são ${numP.join(", ")}.`);
+    console.log(`A quantidade de alunos que foram cadastrados foi ${soma} sendo eles ${numI.join(", ")} e suas medias são ${numP.join(", ")}.`);

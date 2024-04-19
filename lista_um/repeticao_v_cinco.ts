@@ -3,12 +3,11 @@ import readline from "readline-sync";
 let c0: number[] = [];
 let s0: string[] = [];
 let h0: number[] = [];
-let bruto: number[] = [];
 
-let totalHomens = 0;
-let totalMulheres = 0;
-let somaSalariosHomens = 0;
-let somaSalariosMulheres = 0;
+let tH = 0;
+let tM = 0;
+let somaH = 0;
+let somaM = 0;
 
 while (true) {
     let C: number = Number(readline.question("Digite o codigo: "));
@@ -22,27 +21,34 @@ while (true) {
     s0.push(S);
     h0.push(H);
 
-    let salarioBruto = H * 26.90;
+    let sBruto = H * 26.90;
 
     if (S === 'M') {
-        totalHomens++;
-        somaSalariosHomens += salarioBruto;
-        let salarioLiquido = salarioBruto - (salarioBruto * 0.1);
-        bruto.push(salarioBruto);
-        console.log(`Seu salário bruto é ${salarioBruto.toFixed(2)} e líquido é ${salarioLiquido.toFixed(2)}`);
+
+        tH++;
+        let sLiquido = sBruto - (sBruto * 0.1);
+        somaH += sLiquido;
+
+
+        console.log(`Seu salário bruto é ${sBruto.toFixed(2)} e líquido é ${sLiquido.toFixed(2)}`);
+
     } else if (S === 'F') {
-        totalMulheres++;
-        somaSalariosMulheres += salarioBruto;
-        let salarioLiquido = salarioBruto - (salarioBruto * 0.06);
-        bruto.push(salarioBruto);
-        console.log(`Seu salário bruto é ${salarioBruto.toFixed(2)} e líquido é ${salarioLiquido.toFixed(2)}`);
+
+        tM++;
+        let sLiquido = sBruto - (sBruto * 0.06);
+        somaM += sLiquido;
+
+        console.log(`Seu salário bruto é ${sBruto.toFixed(2)} e líquido é ${sLiquido.toFixed(2)}`);
+    
     } else {
+
         console.log("Inválido");
+
     }
 }
 
-let mediaSalariosHomens = somaSalariosHomens / totalHomens;
-let mediaSalariosMulheres = somaSalariosMulheres / totalMulheres;
+let mediaSH = somaH / tH;
+let mediaSM = somaM / tM;
 
-console.log(`A média dos salários líquidos dos homens é: ${mediaSalariosHomens.toFixed(2)}`);
-console.log(`A média dos salários líquidos das mulheres é: ${mediaSalariosMulheres.toFixed(2)}`);
+console.log(`A média dos salários líquidos (${somaH}) dos homens(${tH}) é: ${mediaSH.toFixed(2)}`);
+console.log(`A média dos salários líquidos (${somaM}) das mulheres(${tM}) é: ${mediaSM.toFixed(2)}`);

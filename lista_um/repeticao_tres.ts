@@ -5,7 +5,7 @@ console.log("\nDigite dois números aonde o primeiro é maior que o segundo\n");
     let n: number = Number(readline.question("Digite o segundo numero: "));
    
    
-   while(n<m){
+   while(n>m){
 
     console.log("\nInválido, digite um número maior que o primeiro número\n");
     
@@ -14,13 +14,13 @@ console.log("\nDigite dois números aonde o primeiro é maior que o segundo\n");
    }
 
    
-   let num = m;
-   let nume = n - 1;
+   let num = n;
   
    console.log(`\nOs números entre ${m} e ${n} são:`);
-    while(num<nume) {
+    while(m>=num) {
 
-    num++;
+    
     console.log(num);
+    num++;
 
 }

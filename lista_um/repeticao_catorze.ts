@@ -1,13 +1,11 @@
 import readline from "readline-sync";
 
 let soma = 0;
-let numeros: number[] = [];
 let numA = 0;
 let numB = 0;
 
 while (true) {
     let N: number = Number(readline.question("Digite o valor de N: "));
-    numeros.push(N);
     
     if ( 0 <= N) {
 

@@ -12,6 +12,7 @@ function tabelaC(maxP: number): void {
     for (let i = 1; i <= maxP; i++) {
 
         const centimetros = pParaC(i);
+        
         console.log(`${i}         | ${centimetros.toFixed(2)}`);
     }
 }

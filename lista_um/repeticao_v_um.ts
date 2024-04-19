@@ -7,16 +7,16 @@ let numero = Number(readline.question("Digite um numero: "));
 if (numero <= 1) {
     console.log("O numero não é primo.");
 } else {
-    let primo = true;
+    let naoprimo = false;
    
     for (let i = 2; i < numero; i++) {
         if (numero % i === 0) {
-            primo = false; 
+            naoprimo = true; 
             break; 
         }
     }
 
-    if (primo) {
+    if (naoprimo) {
         console.log(`O numero ${numero} é primo.`);
     } else {
         console.log(`O numero ${numero} não é primo.`);

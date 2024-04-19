@@ -1,7 +1,7 @@
 import readline from "readline-sync";
 
 console.log(`_Raiz quadrada_`);
-let num = Number(readline.question("Digite o numero: "));
+let num = Number(readline.question("Digite o numero que tenha raiz quadrada: "));
 let primo = 1;
 let soma = 0;
 
