@@ -7,7 +7,7 @@ let cZe: number = 3;
 let anos: number = 0;
 
 
-while (Ze < Chico) {
+while (Ze <= Chico) {
     Chico += cChico; 
     Ze += cZe; 
     anos++; 
